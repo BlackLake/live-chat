@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {List} from 'antd';
-import Message from '../../Components/Message';
+import Message from '../../components/Message';
 import './style.css';
 
 class MessageListArea extends Component {

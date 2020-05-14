@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { ConfigProvider } from 'antd';
 import enUS from 'antd/es/locale/en_US';
 import 'antd/dist/antd.css';
-import LiveChat from './Containers/LiveChat';
+import LiveChat from './containers/LiveChat';
 
 class App extends Component {
   render() {
