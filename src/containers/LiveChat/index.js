@@ -4,6 +4,7 @@ import InputArea from '../../components/InputArea';
 import webSocket from '../../services/websocket-service';
 import { Button, Modal, Row, Space } from 'antd';
 import './style.css';
+import config from '../../config/config';
 
 class LiveChat extends Component {
   state = {
@@ -50,7 +51,7 @@ class LiveChat extends Component {
 
   onModalConfirm = () => {
     webSocket.open(
-      `ws://104.248.253.86:8080/ws?userName=${this.state.userName}`,
+      `ws://${config.WEBSOCKET_API_URL}?userName=${this.state.userName}`,
       this.onConnectionOpened,
       this.onMessageReceived,
       this.onConnectionClosed,
