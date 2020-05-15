@@ -36,6 +36,7 @@ class InputArea extends Component {
             <Input
               className={'message-input'}
               onChange={(e) => this.onInputChanged(e.target.value)}
+              onPressEnter={this.sendMessage}
               value={this.state.input}
               ref={(input) => {
                 this.messageInput = input;

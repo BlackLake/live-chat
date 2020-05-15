@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react';
 import MessageListArea from '../MessageListArea';
 import InputArea from '../../components/InputArea';
 import webSocket from '../../services/websocket-service';
-import { Button, Modal, Row, Space } from 'antd';
+import { Button, Input, Modal, Row, Space } from 'antd';
 import './style.css';
 import config from '../../config/config';
 
@@ -71,9 +71,10 @@ class LiveChat extends Component {
           <Row justify={'center'} className={'modal-row'}>
             <Space>
               <span>Username :</span>
-              <input
+              <Input
                 value={this.state.userName}
                 onChange={(e) => this.onUserNameInputChange(e.target.value)}
+                onPressEnter={this.onModalConfirm}
                 autoFocus
               />
               <span>{this.state.connectionCloseReason}</span>
