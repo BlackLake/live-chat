@@ -50,7 +50,7 @@ class LiveChat extends Component {
 
   onModalConfirm = () => {
     webSocket.open(
-      `ws://localhost:8080/ws?userName=${this.state.userName}`,
+      `ws://104.248.253.86:8080/ws?userName=${this.state.userName}`,
       this.onConnectionOpened,
       this.onMessageReceived,
       this.onConnectionClosed,
