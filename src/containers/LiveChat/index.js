@@ -1,8 +1,8 @@
-import React, {Component, Fragment} from 'react';
+import React, { Component, Fragment } from 'react';
 import MessageListArea from '../MessageListArea';
 import InputArea from '../../components/InputArea';
 import webSocket from '../../services/websocket-service';
-import {Button, Modal, Row, Space} from 'antd';
+import { Button, Modal, Row, Space } from 'antd';
 import './style.css';
 
 class LiveChat extends Component {
@@ -14,19 +14,12 @@ class LiveChat extends Component {
   };
 
   onConnectionOpened = () => {
-    const connectionOpenedMessage = {
-      sender: 'System',
-      message: 'Connected To WebSocket'
-    };
-
     this.setState({
-      messages: [...this.state.messages, connectionOpenedMessage],
       isModalVisible: false
     });
   };
 
   onMessageReceived = (message) => {
-    console.log('message received', message);
     this.setState({ messages: [...this.state.messages, message] });
   };
 
