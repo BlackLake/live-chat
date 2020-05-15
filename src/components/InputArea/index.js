@@ -5,7 +5,7 @@ import webSocket from '../../services/websocket-service';
 
 class InputArea extends Component {
   state = {
-    input: null
+    input: ''
   };
 
   onInputChanged = (input) => {
@@ -13,17 +13,18 @@ class InputArea extends Component {
   };
 
   clearInput = () => {
-    this.setState({ input: null });
+    this.setState({ input: '' });
   };
 
   sendMessage = () => {
-    if (webSocket.isSocketInitialized()) {
+    if (webSocket.isSocketInitialized() && this.state.input !== '') {
       const message = {
-        sender: 'BlackLake',
+        sender: this.props.userName,
         message: this.state.input
       };
       webSocket.sendMessage(message);
       this.clearInput();
+      this.messageInput.focus();
     }
   };
 
@@ -36,6 +37,10 @@ class InputArea extends Component {
               className={'message-input'}
               onChange={(e) => this.onInputChanged(e.target.value)}
               value={this.state.input}
+              ref={(input) => {
+                this.messageInput = input;
+              }}
+              autoFocus
             />
           </Row>
         </Col>

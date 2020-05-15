@@ -16,15 +16,8 @@ const webSocket = {
     socket.onmessage = (message) => {
       onMessage(JSON.parse(message.data));
     };
-    socket.onclose = () => {
-      onClose();
-      console.log(
-        'WebSocket connection is Closed. Reconnect will be attempted in 1 second'
-      );
-
-      setTimeout(() => {
-        webSocket.open(url, onOpen, onMessage, onClose, onError);
-      }, 1000);
+    socket.onclose = (closeEvent) => {
+      onClose(closeEvent.reason);
     };
     socket.onError = (error) => {
       onError(error);
