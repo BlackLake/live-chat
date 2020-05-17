@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/live-chat/static/css/main.7db47676.chunk.css",
-    "main.js": "/live-chat/static/js/main.86356bc3.chunk.js",
-    "main.js.map": "/live-chat/static/js/main.86356bc3.chunk.js.map",
+    "main.js": "/live-chat/static/js/main.3e56467e.chunk.js",
+    "main.js.map": "/live-chat/static/js/main.3e56467e.chunk.js.map",
     "runtime-main.js": "/live-chat/static/js/runtime-main.d63b872c.js",
     "runtime-main.js.map": "/live-chat/static/js/runtime-main.d63b872c.js.map",
     "static/css/2.d7262850.chunk.css": "/live-chat/static/css/2.d7262850.chunk.css",
     "static/js/2.b834ad4b.chunk.js": "/live-chat/static/js/2.b834ad4b.chunk.js",
     "static/js/2.b834ad4b.chunk.js.map": "/live-chat/static/js/2.b834ad4b.chunk.js.map",
     "index.html": "/live-chat/index.html",
-    "precache-manifest.d71723a2318a5c3b8fce1e3d935390e3.js": "/live-chat/precache-manifest.d71723a2318a5c3b8fce1e3d935390e3.js",
+    "precache-manifest.130f2992b8fc7b64e6aa42d5fb4e66a6.js": "/live-chat/precache-manifest.130f2992b8fc7b64e6aa42d5fb4e66a6.js",
     "service-worker.js": "/live-chat/service-worker.js",
     "static/css/2.d7262850.chunk.css.map": "/live-chat/static/css/2.d7262850.chunk.css.map",
     "static/css/main.7db47676.chunk.css.map": "/live-chat/static/css/main.7db47676.chunk.css.map",
@@ -20,6 +20,6 @@
     "static/css/2.d7262850.chunk.css",
     "static/js/2.b834ad4b.chunk.js",
     "static/css/main.7db47676.chunk.css",
-    "static/js/main.86356bc3.chunk.js"
+    "static/js/main.3e56467e.chunk.js"
   ]
 }
