@@ -51,7 +51,7 @@ class LiveChat extends Component {
 
   onModalConfirm = () => {
     webSocket.open(
-      `ws://${config.WEBSOCKET_API_URL}?userName=${this.state.userName}`,
+      `${config.WEBSOCKET_API_URL}?userName=${this.state.userName}`,
       this.onConnectionOpened,
       this.onMessageReceived,
       this.onConnectionClosed,
